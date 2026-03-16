@@ -1,9 +1,9 @@
 # Assignment 2 — Genetic Algorithm: Knapsack Problem
 ## Observation Report
 
-**Student Name  :** ___________________________  
-**Student ID    :** ___________________________  
-**Date Submitted:** ___________________________  
+**Student Name  :** Krishnaveni Pola  
+**Student ID    :** 2310040013  
+**Date Submitted:** 16-03-2026 
 
 ---
 
@@ -23,13 +23,15 @@ Open `ga_knapsack.py` and read through it. Then answer these questions.
 **Q1. What does the `fitness()` function return? Why does an overweight solution score 0?**
 
 ```
-[ YOUR ANSWER — 2 to 3 sentences ]
+The fitness() function returns the total value of all items included in a potential solution.
+If a solution is overweight, it violates the constraint of the knapsack problem, making it invalid. Assigning it a fitness score of 0 is to ensure that these invalid solutions are not selected.
 ```
 
 **Q2. What does `tournament_select()` do? Why are higher-fitness individuals more likely to be chosen?**
 
 ```
-[ YOUR ANSWER — 2 to 3 sentences ]
+Tournament selection picks a few random individuals from the population and selects the one with the best fitness from that small group to be a parent.
+Higher-fitness individuals are more likely to be chosen because they will win any tournament they are entered into against less-fit individuals.
 ```
 
 **Q3. Look at the `run_ga()` loop. Find this line:**
@@ -39,7 +41,7 @@ next_gen = [best_chromosome[:]]
 **What is this doing? Why is it important to always keep the best solution?**
 
 ```
-[ YOUR ANSWER — 2 to 3 sentences ]
+This line is implementing "elitism," where the best individual from the current generation is copied directly into the next generation. This is important because crossover and mutation are random processes that might accidentally discard the best solution found so far. Elitism guarantees that the quality of the population's best solution will never decrease from one generation to the next.
 ```
 
 ---
