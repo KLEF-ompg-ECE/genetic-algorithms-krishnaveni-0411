@@ -23,15 +23,15 @@ Open `ga_knapsack.py` and read through it. Then answer these questions.
 **Q1. What does the `fitness()` function return? Why does an overweight solution score 0?**
 
 ```
-The fitness() function returns the total value of all items included in a potential solution.
-If a solution is overweight, it violates the constraint of the knapsack problem, making it invalid. Assigning it a fitness score of 0 is to ensure that these invalid solutions are not selected.
+[The fitness() function returns the total value of all items included in a potential solution.
+If a solution is overweight, it violates the constraint of the knapsack problem, making it invalid. Assigning it a fitness score of 0 is to ensure that these invalid solutions are not selected.]
 ```
 
 **Q2. What does `tournament_select()` do? Why are higher-fitness individuals more likely to be chosen?**
 
 ```
-Tournament selection picks a few random individuals from the population and selects the one with the best fitness from that small group to be a parent.
-Higher-fitness individuals are more likely to be chosen because they will win any tournament they are entered into against less-fit individuals.
+[Tournament selection picks a few random individuals from the population and selects the one with the best fitness from that small group to be a parent.
+Higher-fitness individuals are more likely to be chosen because they will win any tournament they are entered into against less-fit individuals.]
 ```
 
 **Q3. Look at the `run_ga()` loop. Find this line:**
